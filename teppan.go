@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"text/template"
 
@@ -25,15 +24,8 @@ func main() {
 	}
 
 	envs := envmap.All()
-
 	templateFile := os.Args[1]
-	rawData, err := ioutil.ReadFile(templateFile)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to load template file: %s\n", templateFile)
-		os.Exit(1)
-	}
-
-	tmpl, err := template.New("teppan").Parse(string(rawData))
+	tmpl, err := template.ParseFiles(templateFile)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to parse template file: %s\n", templateFile)
 		os.Exit(1)

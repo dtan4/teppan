@@ -7,7 +7,7 @@ CLI tool to generate text from template with .env
 Template format is [Go's text/template package](https://golang.org/pkg/text/template/).
 
 ```bash
-$ teppan <template file>
+$ teppan [--base64] <template file>
 ```
 
 You can try teppan as below:
@@ -24,6 +24,10 @@ NAME=dtan4
 
 $ teppan sample.tmpl
 Hello, my name is dtan4.
+
+# Embed Base64-encoded environment variables
+$ ./teppan --base64 sample.tmpl
+Hello, my name is ZHRhbjQ=.
 ```
 
 ## Author

@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/dtan4/teppan",
+	"GoVersion": "go1.5.1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/higanworks/envmap",
+			"Rev": "4eb38fd4f96bdca0deb8691ae3d25ac97912d650"
+		},
+		{
+			"ImportPath": "github.com/joho/godotenv",
+			"Comment": "v1-8-g443e926",
+			"Rev": "443e926da0d793d3b3f32118b1e4ba52ada26503"
+		}
+	]
+}

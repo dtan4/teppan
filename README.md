@@ -20,13 +20,15 @@ Hello, my name is {{ .NAME }}.
 
 $ cp .env.sample .env
 $ vi .env
+$ cat .env
 NAME=dtan4
 
+# Embed environment variables
 $ teppan sample.tmpl
 Hello, my name is dtan4.
 
 # Embed Base64-encoded environment variables
-$ ./teppan --base64 sample.tmpl
+$ teppan --base64 sample.tmpl
 Hello, my name is ZHRhbjQ=.
 ```
 
